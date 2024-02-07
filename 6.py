@@ -1,8 +1,6 @@
-def main():
-    lis = [int(x) for x in input().split()]
-
-    is_prime = lambda num: all(num%i!=0 for i in range(2, num)) and num > 1
-    
-    listik = filter(is_prime, lis)
-    print(*listik)
-main()
+def reverser(word):
+    word = word.split()
+    word.reverse()
+    return word
+h = "hello amazing world"
+print(reverser(h))
