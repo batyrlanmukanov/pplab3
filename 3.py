@@ -1,10 +1,17 @@
-def solve(numheads, numlegs):
-    x = numheads * 2
-    numlegs -= x
-    numlegs /= 2
-    numheads -=numlegs
-    print("chicken num: " + str(numheads) +  "\nrabbit num: " + str(numlegs))
+class Shape:
+    def __init__(self):
+        self.area = 0
+    def Area(self):
+        return self.area
 
-numh = float(input())
-numl = float(input())
-solve(numh, numl)
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.area = length*width
+
+def main():
+    length = int(input("Length = "))
+    width = int(input("Width = "))
+    a = Rectangle(length, width)
+    print(a.Area())
+
+main()

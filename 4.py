@@ -1,20 +1,22 @@
-def prime(list):
-    prime_nums = []
-    for x in list:
-        if x <= 1:
-            continue
-        if x <= 3:
-            prime_nums.append(x)
-            continue
-        i = 2
-        count = 0
-        while i < x:
-            if x%i == 0:
-                count += 1
-            i += 1
-        if count == 0:
-            prime_nums.append(x)
-    print(prime_nums)
-list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-prime(list)
-            
+from math import sqrt
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    def show(self):
+        print("X: ", self.x, "\t", "Y: ", self.y)
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+    def dist(self, point):
+        print(sqrt( (point.x - self.x)**2 + (point.y - self.y )**2) )
+
+def main():
+    point1 = Point(1, 2)
+    point1.move(-1, -4)
+    point2 = Point(0, 1)
+
+
+    point1.show()
+    point1.dist(point2)
+main()

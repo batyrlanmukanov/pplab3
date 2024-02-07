@@ -1,4 +1,13 @@
-def convert(gr):
-    return 28.3495231 * gr
-grams = int(input())
-print(convert(grams))
+class text:
+    def __init__(self, string):
+        self.string = string
+
+    def getString():
+        return text(input())
+    def printString(self):
+        print(self.string)
+
+def main():
+    test = text.getString()
+    test.printString()
+main()
